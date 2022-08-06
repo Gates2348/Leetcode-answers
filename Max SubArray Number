@@ -1,0 +1,24 @@
+package appointmentApp;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int nums[] = {2,4,5,7,9,2};
+        int k = 3;
+
+       int maxSum = 0;
+       int window = k;
+
+       for(int a = 0; a < nums.length - window;a++){
+           int tempSum = 0;
+           for(int j = a;j < a + k;j++){
+               tempSum += nums[j];
+           }
+           if(tempSum > maxSum){
+               maxSum = tempSum;
+           }
+       }
+        System.out.println(maxSum);
+
+    }
+}
