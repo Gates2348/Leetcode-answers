@@ -1,0 +1,25 @@
+package appointmentApp;
+
+import java.util.HashMap;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String strs[] = {"Flowers", "Flow", "Flight"};
+        longestCommonPrefix(strs);
+        System.out.println(longestCommonPrefix(strs));
+    }
+
+    static String longestCommonPrefix(String[] strs) {
+        String compare = strs[0];
+        String answer = "";
+
+        for(int a = 1;a < strs.length;a++){
+            while(strs[a].indexOf(compare) != 0){
+                compare = compare.substring(0, compare.length() - 1);
+            }
+        }
+
+        return compare;
+    }
+}
